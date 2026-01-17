@@ -1,7 +1,7 @@
 /* Order Management Styles */
 .order-management {
   padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: linear-gradient(135deg, #438ad2 0%, #f1f5f9 100%);
   min-height: 100vh;
 }
 
@@ -33,7 +33,7 @@
 .title-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #9ea2b6 0%, #764ba2 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
 .title {
   font-size: 2rem;
   font-weight: 800;
-  color: #1a202c;
+  color: #280f05;
   margin: 0;
   background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
   -webkit-background-clip: text;
