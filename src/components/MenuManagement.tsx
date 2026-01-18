@@ -176,15 +176,8 @@ export default function MenuManagement() {
       description: description.trim(),
       price: parseFloat(price),
       category,
-      image: image.trim() || 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&h=200&fit=crop',
-      available: true,
-      restaurant_id: user!.restaurantId,
-      dietaryInfo: {
-        isVegetarian: false,
-        isVegan: false,
-        isGlutenFree: false,
-        isNutFree: false
-      }
+      image: image.trim(),
+      available: true
     }
 
     try {
