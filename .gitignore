@@ -29,3 +29,6 @@ __pycache__/
 
 # Environment files (optional, for secrets)
 .env
+
+#ngrok
+ngrok-v3-stable-linux-amd64.tgz
