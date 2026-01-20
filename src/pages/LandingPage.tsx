@@ -23,27 +23,30 @@ export default function LandingPage() {
       icon: <Smartphone className="w-12 h-12" />,
       title: "QR Code Ordering",
       description: "Instant menu access with QR scanning",
-      color: "from-blue-500 to-purple-600"
+      color: "from-blue-500 to-purple-600",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&h=200&fit=crop"
     },
     {
       icon: <Zap className="w-12 h-12" />,
       title: "Lightning Fast",
       description: "Orders processed in real-time",
-      color: "from-purple-500 to-pink-600"
+      color: "from-purple-500 to-pink-600",
+      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=300&h=200&fit=crop"
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "Boost Efficiency",
       description: "Reduce staff workload by 60%",
-      color: "from-pink-500 to-orange-600"
+      color: "from-pink-500 to-orange-600",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=300&h=200&fit=crop"
     }
   ]
 
   const stats = [
-    { number: "--", label: "Happy Restaurants" },
-    { number: "--", label: "Orders Processed" },
-    { number: "--", label: "Customer Rating" },
-    { number: "--", label: "Cost Reduction" }
+    { number: "500+", label: "Happy Restaurants" },
+    { number: "1000+", label: "Orders Processed" },
+    { number: "4.8", label: "Customer Rating" },
+    { number: "30%", label: "Cost Reduction" }
   ]
 
   return (
@@ -63,10 +66,6 @@ export default function LandingPage() {
       <nav className={`navbar ${isVisible ? 'nav-visible' : ''}`}>
         <div className="nav-container">
           <div className="nav-logo">
-            <div className="logo-icon">
-              <span className="logo-text">T</span>
-              <div className="logo-pulse"></div>
-            </div>
             <span className="brand-name">TapTable</span>
           </div>
           
@@ -92,10 +91,8 @@ export default function LandingPage() {
             </div>
             
             <h1 className="hero-title">
-              Transform Your
-              <span className="gradient-text"> Restaurant Experience</span>
-              <br />
-              with Smart QR Ordering
+              Transform Your Restaurant Experience with
+              <span className="gradient-text"> Smart QR ordering</span>
             </h1>
             
             <p className="hero-description">
@@ -128,8 +125,8 @@ export default function LandingPage() {
           
           <div className={`hero-visual ${isVisible ? 'visual-visible' : ''}`}>
             <div className="phones-container">
-              {/* First Phone */}
-              <div className="phone-mockup phone-left">
+              {/* Single Phone */}
+              <div className="phone-mockup">
                 <div className="phone-frame">
                   <div className="phone-notch"></div>
                   <div className="phone-screen">
@@ -138,69 +135,10 @@ export default function LandingPage() {
                       <div className="table-badge-phone">Table 7</div>
                     </div>
                     <div className="menu-grid">
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%)'}}></div>
-                        <div className="menu-item-name">Spicy Wings</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #ffd93d 0%, #ffed4e 100%)'}}></div>
-                        <div className="menu-item-name">Pasta</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #6bcf7f 0%, #8ee99e 100%)'}}></div>
-                        <div className="menu-item-name">Salad</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #ff9a76 0%, #ffb088 100%)'}}></div>
-                        <div className="menu-item-name">Pizza</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #a29bfe 0%, #b8b2ff 100%)'}}></div>
-                        <div className="menu-item-name">Burger</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #fd79a8 0%, #ff9ff3 100%)'}}></div>
-                        <div className="menu-item-name">Dessert</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Second Phone */}
-              <div className="phone-mockup phone-right">
-                <div className="phone-frame">
-                  <div className="phone-notch"></div>
-                  <div className="phone-screen">
-                    <div className="menu-header">
-                      <div className="menu-title">TapTable Menu</div>
-                      <div className="table-badge-phone">Table 5</div>
-                    </div>
-                    <div className="menu-grid">
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #74b9ff 0%, #a8daff 100%)'}}></div>
-                        <div className="menu-item-name">Seafood</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #55efc4 0%, #81f5d5 100%)'}}></div>
-                        <div className="menu-item-name">Sushi</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #fab1a0 0%, #ffc8b7 100%)'}}></div>
-                        <div className="menu-item-name">Steak</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #dfe6e9 0%, #f0f3f5 100%)'}}></div>
-                        <div className="menu-item-name">Rice Bowl</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #ffeaa7 0%, #fff5c2 100%)'}}></div>
-                        <div className="menu-item-name">Noodles</div>
-                      </div>
-                      <div className="menu-item-card">
-                        <div className="menu-item-image" style={{background: 'linear-gradient(135deg, #ff7675 0%, #ff9f9f 100%)'}}></div>
-                        <div className="menu-item-name">Drinks</div>
-                      </div>
+                      <div className="menu-item-image" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&h=300&fit=crop)', backgroundSize: '130%', backgroundPosition: 'center'}}></div>
+                      <div className="menu-item-image" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop)', backgroundSize: '130%', backgroundPosition: 'center'}}></div>
+                      <div className="menu-item-image" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=300&fit=crop)', backgroundSize: '130%', backgroundPosition: 'center'}}></div>
+                      <div className="menu-item-image" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop)', backgroundSize: '130%', backgroundPosition: 'center'}}></div>
                     </div>
                   </div>
                 </div>
@@ -219,7 +157,7 @@ export default function LandingPage() {
       <section id="features" className="features-section">
         <div className="section-container">
           <div className="section-header">
-            <h2 className="section-title">Powerful Features</h2>
+            <h2 className="section-title">Our Features</h2>
             <p className="section-description">
               Everything you need to revolutionize your restaurant operations
             </p>
@@ -232,12 +170,9 @@ export default function LandingPage() {
                 className={`feature-card ${activeFeature === index ? 'active' : ''}`}
                 onMouseEnter={() => setActiveFeature(index)}
               >
-                <div className={`feature-icon bg-gradient-to-br ${feature.color}`}>
-                  {feature.icon}
-                </div>
+                <div className="feature-image" style={{backgroundImage: `url(${feature.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-description">{feature.description}</p>
-                <div className="feature-glow"></div>
               </div>
             ))}
           </div>
@@ -250,7 +185,7 @@ export default function LandingPage() {
           <div className="section-header">
             <h2 className="section-title">How it works</h2>
             <p className="section-description">
-              Get started in 4 simple steps
+              Get started in a couple steps
             </p>
           </div>
           
@@ -290,13 +225,26 @@ export default function LandingPage() {
             <p className="section-subtitle">No commission. No per-order fee. Flat pricing.</p>
           </div>
 
+          {/* Character Illustration */}
+          <div className="pricing-character">
+            <img src="https://illustrations.popsy.co/amber/woman-holding-a-plant.svg" alt="Character with shopping bags" className="character-image" />
+          </div>
+
+          {/* Billing Period Toggle */}
+          <div className="billing-toggle">
+            <button className="billing-option active">Monthly</button>
+            <button className="billing-option">Quarterly</button>
+            <button className="billing-option">6 Months</button>
+            <button className="billing-option">Yearly</button>
+          </div>
+
           <div className="pricing-cards">
             {/* Starter Plan */}
             <div className="pricing-card">
               <div className="plan-header">
                 <h3 className="plan-name">Starter</h3>
                 <div className="plan-price">
-                  <span className="price">$29</span>
+                  <span className="price">₹499</span>
                   <span className="period">/month</span>
                 </div>
               </div>
@@ -316,7 +264,7 @@ export default function LandingPage() {
               <div className="plan-header">
                 <h3 className="plan-name">Professional</h3>
                 <div className="plan-price">
-                  <span className="price">$79</span>
+                  <span className="price">₹1499</span>
                   <span className="period">/month</span>
                 </div>
               </div>
@@ -337,7 +285,8 @@ export default function LandingPage() {
               <div className="plan-header">
                 <h3 className="plan-name">Enterprise</h3>
                 <div className="plan-price">
-                  <span className="price">Custom</span>
+                  <span className="price">₹2499</span>
+                  <span className="period">/month</span>
                 </div>
               </div>
               <ul className="plan-features">
@@ -363,19 +312,14 @@ export default function LandingPage() {
       <section className="cta-section">
         <div className="cta-container">
           <div className="cta-content">
-            <h2 className="cta-title">Ready to Transform Your Restaurant?</h2>
+            <h2 className="cta-title">Ready to transform your restaurant?</h2>
             <p className="cta-description">
-              Join thousands of restaurants already using TapTable to delight customers and boost profits
+              Join thousands of restaurants already using TapTable
             </p>
             <Link to="/admin/login" className="cta-button">
-              <span>Start Your Free Trial</span>
+              <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
-          <div className="cta-bg-effects">
-            <div className="effect-circle circle-1"></div>
-            <div className="effect-circle circle-2"></div>
-            <div className="effect-circle circle-3"></div>
           </div>
         </div>
       </section>
@@ -385,9 +329,6 @@ export default function LandingPage() {
         <div className="footer-container">
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="logo-icon">
-                <span className="logo-text">T</span>
-              </div>
               <span className="brand-name">TapTable</span>
             </div>
             <p className="footer-description">
