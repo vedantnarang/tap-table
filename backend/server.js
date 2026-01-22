@@ -1,12 +1,27 @@
-const express=require('express');
-const app=express();
+const express = require('express');
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+const authRoutes = require('./routes/auth');
+
+dotenv.config();
+
+connectDB();
+
+const app = express();
+const cors = require('cors');
+
+app.use(express.json());
+app.use(cors());
+app.use('/auth', authRoutes);
 
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send("backend running");
 });
 
 
-app.listen(3000,()=>{
-    console.log("server started on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
 });
