@@ -8,7 +8,7 @@ export default {
         secondary: '#6366F1'
       },
       backgroundColor: {
-        DEFAULT: '#723c16ff'
+        DEFAULT: 'rgb(85, 242, 124)'
       }
     },
   },
