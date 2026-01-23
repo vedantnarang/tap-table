@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+
+# Mac OS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# General
+*.bak
+*.tmp
+# Python virtual environment
+backend/venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Database files (optional)
+*.sqlite3
+
+# Environment files (optional, for secrets)
+.env

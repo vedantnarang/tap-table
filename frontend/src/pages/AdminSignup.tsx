@@ -1,13 +1,16 @@
 import { useState } from "react";
-import "./CSS/admin-login.css";
+import "./CSS/admin-signup.css";
 import { apiRequest } from "../services/api";
 
-export default function AdminLogin() {
+export default function AdminSignup() {
   const [showPassword, setShowPassword] = useState(false);
 
   const [form, setForm] = useState({
+    name: "",
     email: "",
-    password: ""
+    phoneNumber: "",
+    password: "",
+    selectedPlan: "FREE"
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,34 +22,37 @@ export default function AdminLogin() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     try {
-      const res = await apiRequest("/auth/login", "POST", form);
-
-      //  Store JWT token
-      localStorage.setItem("token", res.token);
-
-      console.log("Login successful:", res);
-      alert("Login successful!");
-
-      // TODO: redirect to dashboard
-      // navigate("/admin/dashboard");
-
+      const res = await apiRequest("/auth/signup", "POST", form);
+      console.log("Signup successful:", res);
+      alert("Signup successful!");
     } catch (err: any) {
-      alert(err.message || "Invalid email or password");
+      alert(err.message || "Signup failed");
     }
   };
 
   return (
-    <div className="admin-login-page">
-      <div className="login-card">
-        <div className="login-header">
-          <h1>Admin Login 🌿</h1>
-          <p>Access your dashboard securely</p>
+    <div className="admin-signup-page">
+      <div className="signup-card">
+        <div className="signup-header">
+          <h1>Create Admin Account 🌿</h1>
+          <p>Manage menus, orders & analytics securely</p>
         </div>
 
         {/* FORM */}
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="signup-form" onSubmit={handleSubmit}>
+          <div className="input-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Admin name"
+              value={form.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
           <div className="input-group">
             <label>Email Address</label>
             <input
@@ -59,20 +65,30 @@ export default function AdminLogin() {
             />
           </div>
 
+          <div className="input-group">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              placeholder="+91 XXXXX XXXXX"
+              value={form.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
           {/* Password with Eye Toggle */}
           <div className="input-group password-group">
             <label>Password</label>
-
             <div className="password-wrapper">
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
-                placeholder="Enter your password"
+                placeholder="Create strong password"
                 value={form.password}
                 onChange={handleChange}
                 required
               />
-
               <span
                 className="eye-toggle"
                 onClick={() => setShowPassword(!showPassword)}
@@ -82,26 +98,15 @@ export default function AdminLogin() {
             </div>
           </div>
 
-          <div className="login-options">
-            <label className="remember-me">
-              <input type="checkbox" />
-              Remember me
-            </label>
-
-            <a href="/admin/forgot-password" className="forgot-link">
-              Forgot password?
-            </a>
-          </div>
-
-          <button type="submit" className="login-btn">
-            Login to Dashboard
+          <button type="submit" className="signup-btn">
+            Create Admin Account
           </button>
         </form>
 
-        <div className="login-footer">
+        <div className="signup-footer">
           <p>
-            New admin?
-            <a href="/admin/signup"> Create account</a>
+            Already an admin?
+            <a href="/admin/login"> Login</a>
           </p>
         </div>
       </div>

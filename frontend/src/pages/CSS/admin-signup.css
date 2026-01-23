@@ -1,0 +1,146 @@
+/* Page Background */
+.admin-signup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #CFFFDC, #68BA7F);
+  padding: 2rem;
+}
+
+/* Signup Card */
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 20px 60px rgba(46, 111, 64, 0.25);
+}
+
+/* Header */
+.signup-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signup-header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #253D2C;
+  margin-bottom: 0.5rem;
+}
+
+.signup-header p {
+  font-size: 0.95rem;
+  color: #2E6F40;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #253D2C;
+}
+
+.input-group input {
+  padding: 0.75rem 0.9rem;
+  border-radius: 12px;
+  border: 1.5px solid rgba(46, 111, 64, 0.25);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+  background: #F7FFF9;
+}
+
+.input-group input:focus {
+  border-color: #2E6F40;
+  box-shadow: 0 0 0 3px rgba(46, 111, 64, 0.15);
+}
+/* Password Eye Toggle */
+.password-group {
+  position: relative;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem; /* space for eye icon */
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  user-select: none;
+  color: #2E6F40;
+  transition: transform 0.2s ease;
+}
+
+.eye-toggle:hover {
+  transform: scale(1.15);
+}
+
+/* Button */
+.signup-btn {
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2E6F40, #253D2C);
+  box-shadow: 0 10px 25px rgba(46, 111, 64, 0.35);
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(46, 111, 64, 0.45);
+}
+
+/* Footer */
+.signup-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #253D2C;
+}
+
+.signup-footer a {
+  color: #2E6F40;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 2rem 1.5rem;
+  }
+}
