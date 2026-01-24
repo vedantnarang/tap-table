@@ -5,23 +5,13 @@ const restaurantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    ownerName: {
+    contactPhone: {
         type: String,
-        required: true
+        required: true, 
     },
-    phoneNumber: {
+    contactEmail: {
         type: String,
         required: true,
-        unique: true//for login 
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,//for login 
-    },
-    password: {
-        type: String,
-        required: true
     },
     totalTables: {
         type: Number,
@@ -48,7 +38,6 @@ const restaurantSchema = new mongoose.Schema({
         default: 'free trail',
         type: String
     }
-}, { timestamps: true }
-);
+}, { timestamps: true });
 
 module.exports = mongoose.model('restaurant', restaurantSchema);

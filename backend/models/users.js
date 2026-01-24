@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const restaurant = require('./restaurant');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -9,26 +8,27 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
+        unique: true
+    },
+    phoneNumber: {
+        type: String,
+        required: true,
+        unique: true
     },
     password: {
         type: String,
         required: true,
     },
-    phoneNumber: {
-        type: String,
-        required: true
-    },
     designation: {
         type: String,
-        required: false,
-        enum:['owner','manager','waiter','chef','staff'],
-        default:'staff'
+        enum: ['owner', 'manager', 'staff'],
+        default: 'staff'
     },
     restaurantId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'restaurant',
-        required: true
+        required: false // Changed to false as per new flow (User first, Restaurant later)
     }
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('users', userSchema);
