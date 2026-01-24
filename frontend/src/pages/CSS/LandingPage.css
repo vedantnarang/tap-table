@@ -138,10 +138,23 @@
 }
 
 .nav-logo .brand-name {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #253D2C !important; /* Dark Forest */
-  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #154d26;
+  letter-spacing: 0.15em;
+  -webkit-text-stroke: 1px #f9f9f9;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 2px #ffffff) ;
+  text-shadow: 
+    -1px -1px 0 #2E6F40,
+    1px -1px 0 #2E6F40,
+    -1px 1px 0 #2E6F40,
+    1px 1px 0 #2E6F40,
+    -1px 0 0 #2E6F40,
+    1px 0 0 #2E6F40,
+    0 -1px 0 #2E6F40,
+    0 1px 0 #2E6F40;
 }
 
 .nav-links {
@@ -151,7 +164,7 @@
 }
 
 .nav-link {
-  color: #253D2C; /* Dark Forest */
+  color: #000000; /* Dark Forest */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -1156,6 +1169,16 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.footer-logo .brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: transparent;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke: 2px white;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
 }
 
 .footer-description {

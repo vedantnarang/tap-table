@@ -135,7 +135,7 @@ export default function LandingPage() {
                   <div className="phone-notch"></div>
                   <div className="phone-screen">
                     <div className="menu-header">
-                      <div className="menu-title">TapTable Menu</div>
+                      <div className="menu-title">SCAN&DINE Menu</div>
                       <div className="table-badge-phone">Table 7</div>
                     </div>
                     <div className="menu-grid">
@@ -318,7 +318,7 @@ export default function LandingPage() {
           <div className="cta-content">
             <h2 className="cta-title">Ready to transform your restaurant?</h2>
             <p className="cta-description">
-              Join thousands of restaurants already using TapTable
+              Join thousands of restaurants already using SCAN&DINE
             </p>
             <Link to="/admin/login" className="cta-button">
               <span>Start Free Trial</span>
