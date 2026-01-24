@@ -90,7 +90,7 @@ export default function LandingPage() {
               <span>Trusted by 10,000+ Restaurants</span>
             </div>
             
-           -<p className="hero-title1">
+            <p className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>
               THE FUTURE OF DINING
             </p>
             <h1 className="hero-title">
@@ -98,7 +98,7 @@ export default function LandingPage() {
               experience with<br />
               <span className="gradient-text">Smart QR Ordering</span>
             </h1>
-            
+
             <p className="hero-description">
               Eliminate wait times, reduce operational costs, and create seamless dining experiences 
               that your customers will love. Join the digital revolution today.
