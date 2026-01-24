@@ -66,7 +66,7 @@ export default function LandingPage() {
       <nav className={`navbar ${isVisible ? 'nav-visible' : ''}`}>
         <div className="nav-container">
           <div className="nav-logo">
-            <span className="brand-name">TapTable</span>
+            <span className="brand-name">SCAN&DINE</span>
           </div>
           
           <div className="nav-links">
@@ -333,7 +333,7 @@ export default function LandingPage() {
         <div className="footer-container">
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="brand-name">TapTable</span>
+              <span className="brand-name">SCAN&DINE</span>
             </div>
             <p className="footer-description">
               Revolutionizing restaurant experiences with smart QR ordering technology
@@ -363,7 +363,7 @@ export default function LandingPage() {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 TapTable. All rights reserved.</p>
+          <p>&copy; 2024 SCAN&DINE. All rights reserved.</p>
         </div>
       </footer>
     </div>

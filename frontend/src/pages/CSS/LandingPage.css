@@ -7,7 +7,7 @@
 
 .landing-container {
   min-height: 100vh;
-  background: #CFFFDC;
+  background: rgba(202, 242, 201, 0.95);;
   color: #333;
   overflow-x: hidden;
   position: relative;
@@ -112,7 +112,7 @@
   z-index: 1000;
   padding: 1rem 0;
   backdrop-filter: blur(20px);
-  background: rgba(207, 255, 220, 0.95); /* Mint Light */
+  background: rgba(202, 242, 201, 0.95);
   border-bottom: 1px solid rgba(46, 111, 64, 0.3); /* Forest Green */
   transform: translateY(-100%);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -339,7 +339,6 @@
   gap: 2rem;
   margin-top: 3rem;
   padding: 2rem;
-  background: linear-gradient(135deg, #2E6F40 0%, #253D2C 100%);
   border-radius: 16px;
 }
 
@@ -350,13 +349,13 @@
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: white;
+  color: rgb(22, 51, 25);
   margin-bottom: 0.25rem;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(22, 51, 25);
   font-weight: 500;
 }
 
@@ -685,7 +684,7 @@
 .features-section {
   padding: 5rem 0;
   position: relative;
-  background: white;
+  background: rgba(225, 236, 225, 0.95) ;
 }
 
 .features-grid {
@@ -755,7 +754,7 @@
 /* How It Works Section */
 .how-it-works-section {
   padding: 5rem 0;
-  background: #CFFFDC;
+  background:gba(202, 242, 201, 0.95);;
 }
 
 .steps-wrapper {
@@ -813,7 +812,7 @@
 .pricing-section {
   padding: 6rem 0;
   position: relative;
-  background: white;
+  background:  rgba(225, 236, 225, 0.95);;
   overflow: visible;
 }
 
@@ -1034,7 +1033,7 @@
 .cta-section {
   padding: 5rem 0 6rem;
   position: relative;
-  background: white;
+  background: rgba(202, 242, 201, 0.95);
 }
 
 .cta-container {
@@ -1042,7 +1041,7 @@
   margin: 0 auto;
   padding: 3rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, #CFFFDC 0%, #CFFFDC 100%);
+  background:  rgba(225, 236, 225, 0.95) ;;
   border-radius: 24px;
 }
 
