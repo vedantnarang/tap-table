@@ -18,7 +18,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, #68BA7F, #2E6F40) !important;
+  background: linear-gradient(135deg, #68BA7F, #76b588) !important;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -78,7 +78,7 @@
 .shape-5 {
   width: 120px;
   height: 120px;
-  background: linear-gradient(45deg, #68BA7F, #2E6F40);
+  background: linear-gradient(45deg, #68BA7F, #81b38f);
   bottom: 40%;
   right: 50%;
   animation-delay: -12s;

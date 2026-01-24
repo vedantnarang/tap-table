@@ -90,9 +90,13 @@ export default function LandingPage() {
               <span>Trusted by 10,000+ Restaurants</span>
             </div>
             
+           -<p className="hero-title1">
+              THE FUTURE OF DINING
+            </p>
             <h1 className="hero-title">
-              Transform Your Restaurant Experience with
-              <span className="gradient-text"> Smart QR ordering</span>
+              Digitize your dining<br />
+              experience with<br />
+              <span className="gradient-text">Smart QR Ordering</span>
             </h1>
             
             <p className="hero-description">
