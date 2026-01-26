@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     restaurantId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'restaurant',
-        required: false // Changed to false as per new flow (User first, Restaurant later)
+        required: false 
     }
 }, { timestamps: true });
 

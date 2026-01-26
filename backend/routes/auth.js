@@ -2,21 +2,18 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/users.js');
+const User = require('../models/User.js');
 
-// Helper to generate JWT
 const generateToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
         expiresIn: '30d',
     });
 };
 
-// Register a new User
+
 router.post('/register', async (req, res) => {
     try {
         const { name, email, phoneNumber, password } = req.body;
-
-        // Check if user exists
         const existingUser = await User.findOne({
             $or: [{ phoneNumber }, { email }]
         });
@@ -25,17 +22,16 @@ router.post('/register', async (req, res) => {
             return res.status(400).json({ message: "User with this phone or email already exists." });
         }
 
-        // Hash password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
-        // Create User
+
+
         const newUser = new User({
-            name,
+            owner_name: name,
             email,
-            phoneNumber,
-            password: hashedPassword,
-            designation: 'owner'
+            phone: phoneNumber,
+            password_hash: hashedPassword,
         });
 
         await newUser.save();
@@ -43,7 +39,7 @@ router.post('/register', async (req, res) => {
         res.status(201).json({
             message: "User Registered Successfully.",
             _id: newUser._id,
-            name: newUser.name,
+            owner_name: newUser.owner_name,
             email: newUser.email,
             token: generateToken(newUser._id)
         });
@@ -54,18 +50,19 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// Login User
 router.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { identifier, password } = req.body; // 'identifier' can be email or phone
 
-        // Check for user email
-        const user = await User.findOne({ email });
+        // Check for user by email OR phone
+        const user = await User.findOne({
+            $or: [{ email: identifier }, { phone: identifier }]
+        });
 
-        if (user && (await bcrypt.compare(password, user.password))) {
+        if (user && (await bcrypt.compare(password, user.password_hash))) {
             res.json({
                 _id: user._id,
-                name: user.name,
+                owner_name: user.owner_name,
                 email: user.email,
                 token: generateToken(user._id),
             });
