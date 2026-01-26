@@ -1,21 +1,11 @@
 const mongoose = require('mongoose');
-const restaurant = require('./restaurant');
-
 
 const menuSchema = new mongoose.Schema({
-    restaurantId: {
-        ref: 'restaurant',
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-    },
-    name: {
-        type: String,
-        required: false,
-    },
-    isActive: {
-        type: Boolean,
-        default: true,
-    }
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    name: { type: String, maxlength: 100, required: true },
+    is_active: { type: Boolean, default: true }
+}, {
+    timestamps: { createdAt: 'created_at', updatedAt: null }
 });
 
-module.exports = mongoose.model('menu', menuSchema);
+module.exports = mongoose.model('Menu', menuSchema);
